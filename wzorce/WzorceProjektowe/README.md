@@ -11,4 +11,21 @@
   - Observers are loosely coupled in that the Observable knows nothing about them, other than that they implement the
     Observer Interface.
 
+## Decorator Pattern
 
+  - attaches additional responsibilities to an object dynamically.
+
+  - decorators provide a flexible alternative to subclassing for extending functionality.
+
+  - Decorator Pattern involves a set of decorator classes that
+    are used to wrap concrete components.
+
+  - decorators change the behavior of their components by adding
+    new functionality before and/orafter (or even in place of) method
+    calls to the component.
+  - You can wrap a component with any number of decorators.
+
+
+# Design principles
+
+  - Classes should be open for extension, but closed for modification.
