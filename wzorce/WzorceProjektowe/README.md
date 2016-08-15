@@ -46,6 +46,9 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - Java’s implementation of the Singleton Pattern makes use of a private constructor, a static method combined with a static variable.
 
+## Command Pattern
+
+  - encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
 
 # Design principles
 
