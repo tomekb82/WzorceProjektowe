@@ -38,6 +38,15 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - Abstract Factory relies on object composition: object creation is implemented in methods exposed in the factory interface.
 
+## Singleton Pattern
+
+  - ensures a class has only one instance, and provides a global point of access to it.
+
+  - provides a global access point to that instance.
+
+  - Java’s implementation of the Singleton Pattern makes use of a private constructor, a static method combined with a static variable.
+
+
 # Design principles
 
   - Classes should be open for extension, but closed for modification.
