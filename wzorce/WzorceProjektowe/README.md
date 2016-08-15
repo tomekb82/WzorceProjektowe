@@ -26,6 +26,13 @@
   - You can wrap a component with any number of decorators.
 
 
+## Factory Method Pattern
+
+  - defines an interface for creating an object, but lets subclasses decide which
+class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
 # Design principles
 
   - Classes should be open for extension, but closed for modification.
+
+  - Depend upon abstractions. Do not depend upon concrete classes
