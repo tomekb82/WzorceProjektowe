@@ -31,6 +31,13 @@
   - defines an interface for creating an object, but lets subclasses decide which
 class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
+  - All factories encapsulate object creation
+
+  - Factory Method relies on inheritance: object creation is delegated to subclasses which implement the factory method to
+    create objects.
+
+  - Abstract Factory relies on object composition: object creation is implemented in methods exposed in the factory interface.
+
 # Design principles
 
   - Classes should be open for extension, but closed for modification.

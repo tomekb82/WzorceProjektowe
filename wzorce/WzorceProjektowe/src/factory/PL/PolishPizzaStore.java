@@ -1,7 +1,10 @@
 package factory.PL;
 
+import factory.CheesePizza;
+import factory.PepperoniPizza;
 import factory.Pizza;
 import factory.PizzaStore;
+import factory.ingredients.PizzaIngredientFactory;
 
 /**
  * Created by tomek on 15.08.16.
@@ -9,11 +12,16 @@ import factory.PizzaStore;
 public class PolishPizzaStore extends PizzaStore {
     @Override
     protected Pizza createPizza(String type) {
+        Pizza pizza = null;
+        PizzaIngredientFactory ingredientFactory = new PolishPizzaIngredientFactory();
+
         if(type.equals("cheese")){
-            return new PolishCheesePizza();
+            pizza = new CheesePizza(ingredientFactory);
+            pizza.setName("Polish cheese pizza");
         } else if(type.equals("pepperoni")){
-            return new PolishPepperoniPizza();
+            pizza = new PepperoniPizza(ingredientFactory);
+            pizza.setName("Polish pepperoni pizza");
         }
-        return null;
+        return pizza;
     }
 }

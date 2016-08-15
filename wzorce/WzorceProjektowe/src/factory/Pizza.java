@@ -1,5 +1,7 @@
 package factory;
 
+import factory.ingredients.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,13 +11,15 @@ import java.util.List;
 public abstract class Pizza {
 
     protected String name;
-    protected String dough;
-    protected String sauce;
-    protected List toppings = new ArrayList<>();
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggies veggies[];
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected List toppings = new ArrayList();
 
-    void prepare(){
-        System.out.println("Preparing " + name);
-    }
+    public abstract void prepare();
+
     void bake(){
         System.out.println("Baking...");
     }
@@ -26,6 +30,9 @@ public abstract class Pizza {
         System.out.println("Boxing...");
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName(){
         return name;
     }
