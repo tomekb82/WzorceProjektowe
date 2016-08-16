@@ -1,0 +1,510 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ff702424690, pid=5036, tid=140698440349440
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_51-b16) (build 1.8.0_51-b16)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.51-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x899690]  Method::checked_resolve_jmethod_id(_jmethodID*)+0x20
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007ff6fc0c2000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=5046, stack(0x00007ff6e87eb000,0x00007ff6e88ec000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000001, RBX=0x00007ff6fc0040b0, RCX=0x00007ff70354c320, RDX=0x00007ff702b29ba0
+RSP=0x00007ff6e88ea910, RBP=0x00007ff6e88ea920, RSI=0x00007ff6fc0c2000, RDI=0x6972502f79746972
+R8 =0x0000000000000000, R9 =0x00007ff6d0012330, R10=0x0000000000000010, R11=0x00007ff702cdae70
+R12=0x0000000000000017, R13=0x6972502f79746972, R14=0x00007ff6fc0c2000, R15=0x00007ff6e88eaa27
+RIP=0x00007ff702424690, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007ff6e88ea910)
+0x00007ff6e88ea910:   0000000000000074 00007ff6fc0040b0
+0x00007ff6e88ea920:   00007ff6e88ea990 00007ff7022b5f9e
+0x00007ff6e88ea930:   0000000000000073 00007ff6e88ea940
+0x00007ff6e88ea940:   00007ff6fc0c2000 0000000000000000
+0x00007ff6e88ea950:   00007ff600000000 0000000000000000
+0x00007ff6e88ea960:   00007ff6e88ea980 00007ff701241e40
+0x00007ff6e88ea970:   6972502f79746972 00007ff6e88eaa27
+0x00007ff6e88ea980:   0000000000000006 00007ff6e88eaa27
+0x00007ff6e88ea990:   00007ff6e88ea9c0 00007ff70102d8c2
+0x00007ff6e88ea9a0:   00007ff6e88ea9c0 6972502f79746972
+0x00007ff6e88ea9b0:   00007ff6e88eaa90 0000000000000030
+0x00007ff6e88ea9c0:   00007ff6e88eaa50 00007ff70100eaa0
+0x00007ff6e88ea9d0:   00007ff6e88eaa08 00007ff6e88eaa00
+0x00007ff6e88ea9e0:   00007ff6e88ea9f8 00007ff6e88eaa1c
+0x00007ff6e88ea9f0:   00000001d0002e00 0000000000000000
+0x00007ff6e88eaa00:   0000000000000000 0000000000000000
+0x00007ff6e88eaa10:   00007ff6d0003480 00000001e88eaa90
+0x00007ff6e88eaa20:   0000000000000007 0000000000000002
+0x00007ff6e88eaa30:   000000000000000f 0000000000000002
+0x00007ff6e88eaa40:   00000000000f0200 000000000000000f
+0x00007ff6e88eaa50:   00007ff6e88eaca0 00007ff7010199c6
+0x00007ff6e88eaa60:   0000372e00000013 00007ff7020f0200
+0x00007ff6e88eaa70:   00007ff6c8000ba0 0000000000000000
+0x00007ff6e88eaa80:   00007ff6e88eaa90 00007ff6e88eac20
+0x00007ff6e88eaa90:   00007ff6d0004f19 00007ff70000023f
+0x00007ff6e88eaaa0:   00007ff6d0005d90 000000000000012c
+0x00007ff6e88eaab0:   00007ff6e88eaae0 00007ff6d0005d90
+0x00007ff6e88eaac0:   00007f0000000000 0000372e0000000f
+0x00007ff6e88eaad0:   00007ff60000ac80 00007ff6e88eaae0
+0x00007ff6e88eaae0:   f67f000007000000 0800000090d312fc
+0x00007ff6e88eaaf0:   676e697274536f74 6a4c292814000000
+0x00007ff6e88eab00:   676e616c2f617661 3b676e697274532f 
+
+Instructions: (pc=0x00007ff702424690)
+0x00007ff702424670:   55 48 89 e5 53 48 83 ec 08 48 85 ff 75 12 31 db
+0x00007ff702424680:   48 89 d8 48 83 c4 08 5b c9 c3 66 0f 1f 44 00 00
+0x00007ff702424690:   48 8b 1f 48 85 db 74 e6 48 83 fb 37 74 e0 48 8b
+0x00007ff7024246a0:   03 48 89 df ff 50 10 84 c0 0f 1f 80 00 00 00 00 
+
+Register to memory mapping:
+
+RAX=0x0000000000000001 is an unknown value
+RBX=0x00007ff6fc0040b0 is an unknown value
+RCX=0x00007ff70354c320: <offset 0x219320> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007ff703333000
+RDX=0x00007ff702b29ba0: <offset 0xf9eba0> in /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/server/libjvm.so at 0x00007ff701b8b000
+RSP=0x00007ff6e88ea910 is pointing into the stack for thread: 0x00007ff6fc0c2000
+RBP=0x00007ff6e88ea920 is pointing into the stack for thread: 0x00007ff6fc0c2000
+RSI=0x00007ff6fc0c2000 is a thread
+RDI=0x6972502f79746972 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007ff6d0012330 is an unknown value
+R10=0x0000000000000010 is an unknown value
+R11=0x00007ff702cdae70: <offset 0x186e70> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007ff702b54000
+R12=0x0000000000000017 is an unknown value
+R13=0x6972502f79746972 is an unknown value
+R14=0x00007ff6fc0c2000 is a thread
+R15=0x00007ff6e88eaa27 is pointing into the stack for thread: 0x00007ff6fc0c2000
+
+
+Stack: [0x00007ff6e87eb000,0x00007ff6e88ec000],  sp=0x00007ff6e88ea910,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x899690]  Method::checked_resolve_jmethod_id(_jmethodID*)+0x20
+V  [libjvm.so+0x72af9e]  jvmti_IsMethodSynthetic+0x2be
+C  [libjdwp.so+0x258c2]  isMethodSynthetic+0x42
+C  [libjdwp.so+0x6aa0]  methods1+0x1b0
+C  [libjdwp.so+0x119c6]  debugLoop_run+0x2b6
+C  [libjdwp.so+0x247ff]  attachThread+0x2f
+V  [libjvm.so+0x797362]  JvmtiAgentThread::call_start_function()+0xc2
+V  [libjvm.so+0xa5cbcf]  JavaThread::thread_main_inner()+0xdf
+V  [libjvm.so+0xa5ccfc]  JavaThread::run()+0x11c
+V  [libjvm.so+0x911048]  java_start(Thread*)+0x108
+C  [libpthread.so.0+0x8182]  start_thread+0xc2
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007ff6fc0d0800 JavaThread "Service Thread" daemon [_thread_blocked, id=5053, stack(0x00007ff6e82e6000,0x00007ff6e83e7000)]
+  0x00007ff6fc0ca800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=5052, stack(0x00007ff6e83e7000,0x00007ff6e84e8000)]
+  0x00007ff6fc0c8000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5051, stack(0x00007ff6e84e8000,0x00007ff6e85e9000)]
+  0x00007ff6d0001000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=5050, stack(0x00007ff6e85e9000,0x00007ff6e86ea000)]
+  0x00007ff6fc0c5800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=5049, stack(0x00007ff6e86ea000,0x00007ff6e87eb000)]
+=>0x00007ff6fc0c2000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=5046, stack(0x00007ff6e87eb000,0x00007ff6e88ec000)]
+  0x00007ff6fc0b5800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5045, stack(0x00007ff6e8af0000,0x00007ff6e8bf1000)]
+  0x00007ff6fc07e800 JavaThread "Finalizer" daemon [_thread_blocked, id=5042, stack(0x00007ff6e8bf1000,0x00007ff6e8cf2000)]
+  0x00007ff6fc07c800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5041, stack(0x00007ff6e8cf2000,0x00007ff6e8df3000)]
+  0x00007ff6fc00d800 JavaThread "main" [_thread_blocked, id=5037, stack(0x00007ff70364d000,0x00007ff70374e000)]
+
+Other Threads:
+  0x00007ff6fc077800 VMThread [stack: 0x00007ff6e8df3000,0x00007ff6e8ef4000] [id=5040]
+  0x00007ff6fc0d3000 WatcherThread [stack: 0x00007ff6e81e5000,0x00007ff6e82e6000] [id=5054]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 18432K, used 3179K [0x00000000ebf80000, 0x00000000ed400000, 0x0000000100000000)
+  eden space 15872K, 20% used [0x00000000ebf80000,0x00000000ec29ae88,0x00000000ecf00000)
+  from space 2560K, 0% used [0x00000000ed180000,0x00000000ed180000,0x00000000ed400000)
+  to   space 2560K, 0% used [0x00000000ecf00000,0x00000000ecf00000,0x00000000ed180000)
+ ParOldGen       total 42496K, used 0K [0x00000000c3e00000, 0x00000000c6780000, 0x00000000ebf80000)
+  object space 42496K, 0% used [0x00000000c3e00000,0x00000000c3e00000,0x00000000c6780000)
+ Metaspace       used 3904K, capacity 4752K, committed 4864K, reserved 1056768K
+  class space    used 436K, capacity 502K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007ff6ec42b000,0x00007ff6ec60d000] byte_map_base: 0x00007ff6ebe0c000
+
+Marking Bits: (ParMarkBitMap*) 0x00007ff702b29660
+ Begin Bits: [0x00007ff6ea419000, 0x00007ff6eb321000)
+ End Bits:   [0x00007ff6eb321000, 0x00007ff6ec229000)
+
+Polling page: 0x00007ff703770000
+
+CodeCache: size=245760Kb used=1503Kb max_used=1503Kb free=244256Kb
+ bounds [0x00007ff6ec9cd000, 0x00007ff6ecc3d000, 0x00007ff6fb9cd000]
+ total_blobs=484 nmethods=233 adapters=175
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0,398 Thread 0x00007ff6fc0ca800  228       3       java.lang.invoke.LambdaForm$NamedFunction::methodType (23 bytes)
+Event: 0,398 Thread 0x00007ff6fc0ca800 nmethod 228 0x00007ff6ecb3e250 code [0x00007ff6ecb3e3c0, 0x00007ff6ecb3e6c8]
+Event: 0,398 Thread 0x00007ff6fc0ca800  229       3       jdk.internal.org.objectweb.asm.Frame::get (46 bytes)
+Event: 0,398 Thread 0x00007ff6fc0ca800 nmethod 229 0x00007ff6ecb3ddd0 code [0x00007ff6ecb3df40, 0x00007ff6ecb3e190]
+Event: 0,398 Thread 0x00007ff6fc0ca800  224       3       jdk.internal.org.objectweb.asm.ClassWriter::put122 (15 bytes)
+Event: 0,398 Thread 0x00007ff6fc0ca800 nmethod 224 0x00007ff6ecb3d8d0 code [0x00007ff6ecb3da60, 0x00007ff6ecb3dc78]
+Event: 0,398 Thread 0x00007ff6fc0ca800  226  s    3       java.lang.StringBuffer::toString (36 bytes)
+Event: 0,399 Thread 0x00007ff6fc0ca800 nmethod 226 0x00007ff6ecb44350 code [0x00007ff6ecb444e0, 0x00007ff6ecb44968]
+Event: 0,399 Thread 0x00007ff6fc0ca800  225       3       java.lang.invoke.MethodType::parameterSlotCount (8 bytes)
+Event: 0,399 Thread 0x00007ff6fc0ca800 nmethod 225 0x00007ff6ecb44ad0 code [0x00007ff6ecb44c40, 0x00007ff6ecb44ef0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (7 events):
+Event: 0,050 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000ebf92a38) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/shar
+Event: 0,050 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000ebf92cc8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/jni.cpp
+Event: 0,351 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000ec204030) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/methodHandles.cpp, line 1125]
+Event: 0,355 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000ec212780) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/prims/methodHandles.cpp, line 1125]
+Event: 2,293 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NullPointerException'> (0x00000000ec28bd20) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 1178]
+Event: 325,541 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NullPointerException'> (0x00000000ec28bfb8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 1178]
+Event: 376,851 Thread 0x00007ff6fc00d800 Exception <a 'java/lang/NullPointerException'> (0x00000000ec28c250) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u51/3951/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 1178]
+
+Events (10 events):
+Event: 529,869 Executing VM operation: ChangeBreakpoints
+Event: 529,869 Executing VM operation: ChangeBreakpoints done
+Event: 529,869 Executing VM operation: ChangeBreakpoints
+Event: 529,869 Executing VM operation: ChangeBreakpoints done
+Event: 529,869 Executing VM operation: ChangeBreakpoints
+Event: 529,869 Executing VM operation: ChangeBreakpoints done
+Event: 529,877 Executing VM operation: RedefineClasses
+Event: 529,879 Executing VM operation: RedefineClasses done
+Event: 529,880 Executing VM operation: GetOrSetLocal
+Event: 529,880 Executing VM operation: GetOrSetLocal done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:06 1346011                            /home/tomek/Desktop/java_jdk/jdk1.8.0_51/bin/java
+00600000-00601000 rw-p 00000000 08:06 1346011                            /home/tomek/Desktop/java_jdk/jdk1.8.0_51/bin/java
+01bc6000-01be7000 rw-p 00000000 00:00 0                                  [heap]
+c3e00000-c6780000 rw-p 00000000 00:00 0 
+c6780000-ebf80000 ---p 00000000 00:00 0 
+ebf80000-ed400000 rw-p 00000000 00:00 0 
+ed400000-100000000 ---p 00000000 00:00 0 
+100000000-100080000 rw-p 00000000 00:00 0 
+100080000-140000000 ---p 00000000 00:00 0 
+7ff6b3e6b000-7ff6b4000000 rw-p 00000000 00:00 0 
+7ff6b4000000-7ff6b4021000 rw-p 00000000 00:00 0 
+7ff6b4021000-7ff6b8000000 ---p 00000000 00:00 0 
+7ff6b8000000-7ff6b8021000 rw-p 00000000 00:00 0 
+7ff6b8021000-7ff6bc000000 ---p 00000000 00:00 0 
+7ff6bc000000-7ff6bc094000 rw-p 00000000 00:00 0 
+7ff6bc094000-7ff6c0000000 ---p 00000000 00:00 0 
+7ff6c0000000-7ff6c0263000 rw-p 00000000 00:00 0 
+7ff6c0263000-7ff6c4000000 ---p 00000000 00:00 0 
+7ff6c4000000-7ff6c4021000 rw-p 00000000 00:00 0 
+7ff6c4021000-7ff6c8000000 ---p 00000000 00:00 0 
+7ff6c8000000-7ff6c8021000 rw-p 00000000 00:00 0 
+7ff6c8021000-7ff6cc000000 ---p 00000000 00:00 0 
+7ff6cc000000-7ff6cc021000 rw-p 00000000 00:00 0 
+7ff6cc021000-7ff6d0000000 ---p 00000000 00:00 0 
+7ff6d0000000-7ff6d0029000 rw-p 00000000 00:00 0 
+7ff6d0029000-7ff6d4000000 ---p 00000000 00:00 0 
+7ff6d4000000-7ff6d4021000 rw-p 00000000 00:00 0 
+7ff6d4021000-7ff6d8000000 ---p 00000000 00:00 0 
+7ff6d8000000-7ff6d8021000 rw-p 00000000 00:00 0 
+7ff6d8021000-7ff6dc000000 ---p 00000000 00:00 0 
+7ff6dc000000-7ff6dc021000 rw-p 00000000 00:00 0 
+7ff6dc021000-7ff6e0000000 ---p 00000000 00:00 0 
+7ff6e0000000-7ff6e0021000 rw-p 00000000 00:00 0 
+7ff6e0021000-7ff6e4000000 ---p 00000000 00:00 0 
+7ff6e4000000-7ff6e4021000 rw-p 00000000 00:00 0 
+7ff6e4021000-7ff6e8000000 ---p 00000000 00:00 0 
+7ff6e80b6000-7ff6e81a7000 rw-p 00000000 00:00 0 
+7ff6e81a7000-7ff6e81a9000 r--s 0001a000 08:06 941324                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jce.jar
+7ff6e81a9000-7ff6e81c3000 r--s 001f7000 08:06 941337                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/deploy.jar
+7ff6e81c3000-7ff6e81d6000 r--s 000d6000 08:06 941322                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/plugin.jar
+7ff6e81d6000-7ff6e81e0000 r--s 0006f000 08:06 941313                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/javaws.jar
+7ff6e81e0000-7ff6e81e5000 r--s 00083000 08:06 941332                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jfr.jar
+7ff6e81e5000-7ff6e81e6000 ---p 00000000 00:00 0 
+7ff6e81e6000-7ff6e82e6000 rw-p 00000000 00:00 0                          [stack:5054]
+7ff6e82e6000-7ff6e82e9000 ---p 00000000 00:00 0 
+7ff6e82e9000-7ff6e83e7000 rw-p 00000000 00:00 0                          [stack:5053]
+7ff6e83e7000-7ff6e83ea000 ---p 00000000 00:00 0 
+7ff6e83ea000-7ff6e84e8000 rw-p 00000000 00:00 0                          [stack:5052]
+7ff6e84e8000-7ff6e84eb000 ---p 00000000 00:00 0 
+7ff6e84eb000-7ff6e85e9000 rw-p 00000000 00:00 0                          [stack:5051]
+7ff6e85e9000-7ff6e85ec000 ---p 00000000 00:00 0 
+7ff6e85ec000-7ff6e86ea000 rw-p 00000000 00:00 0                          [stack:5050]
+7ff6e86ea000-7ff6e86ed000 ---p 00000000 00:00 0 
+7ff6e86ed000-7ff6e87eb000 rw-p 00000000 00:00 0                          [stack:5049]
+7ff6e87eb000-7ff6e87ee000 ---p 00000000 00:00 0 
+7ff6e87ee000-7ff6e88ec000 rw-p 00000000 00:00 0                          [stack:5046]
+7ff6e88ec000-7ff6e88f0000 r-xp 00000000 08:06 941473                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libdt_socket.so
+7ff6e88f0000-7ff6e8aef000 ---p 00004000 08:06 941473                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libdt_socket.so
+7ff6e8aef000-7ff6e8af0000 rw-p 00003000 08:06 941473                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libdt_socket.so
+7ff6e8af0000-7ff6e8af3000 ---p 00000000 00:00 0 
+7ff6e8af3000-7ff6e8bf1000 rw-p 00000000 00:00 0                          [stack:5045]
+7ff6e8bf1000-7ff6e8bf4000 ---p 00000000 00:00 0 
+7ff6e8bf4000-7ff6e8cf2000 rw-p 00000000 00:00 0                          [stack:5042]
+7ff6e8cf2000-7ff6e8cf5000 ---p 00000000 00:00 0 
+7ff6e8cf5000-7ff6e8df3000 rw-p 00000000 00:00 0                          [stack:5041]
+7ff6e8df3000-7ff6e8df4000 ---p 00000000 00:00 0 
+7ff6e8df4000-7ff6e9860000 rw-p 00000000 00:00 0                          [stack:5040]
+7ff6e9860000-7ff6e9a38000 r--s 03d0c000 08:06 941331                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/rt.jar
+7ff6e9a38000-7ff6e9e78000 rw-p 00000000 00:00 0 
+7ff6e9e78000-7ff6ea238000 ---p 00000000 00:00 0 
+7ff6ea238000-7ff6ec229000 rw-p 00000000 00:00 0 
+7ff6ec229000-7ff6ec22a000 ---p 00000000 00:00 0 
+7ff6ec22a000-7ff6ec32a000 rw-p 00000000 00:00 0                          [stack:5039]
+7ff6ec32a000-7ff6ec32b000 ---p 00000000 00:00 0 
+7ff6ec32b000-7ff6ec440000 rw-p 00000000 00:00 0                          [stack:5038]
+7ff6ec440000-7ff6ec56b000 ---p 00000000 00:00 0 
+7ff6ec56b000-7ff6ec576000 rw-p 00000000 00:00 0 
+7ff6ec576000-7ff6ec60c000 ---p 00000000 00:00 0 
+7ff6ec60c000-7ff6ec617000 rw-p 00000000 00:00 0 
+7ff6ec617000-7ff6ec9cd000 ---p 00000000 00:00 0 
+7ff6ec9cd000-7ff6ecc3d000 rwxp 00000000 00:00 0 
+7ff6ecc3d000-7ff6fb9cd000 ---p 00000000 00:00 0 
+7ff6fb9cd000-7ff6fb9e7000 r-xp 00000000 08:06 941501                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libzip.so
+7ff6fb9e7000-7ff6fbbe7000 ---p 0001a000 08:06 941501                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libzip.so
+7ff6fbbe7000-7ff6fbbe8000 rw-p 0001a000 08:06 941501                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libzip.so
+7ff6fbbe8000-7ff6fbbf3000 r-xp 00000000 08:06 3040056                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff6fbbf3000-7ff6fbdf2000 ---p 0000b000 08:06 3040056                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff6fbdf2000-7ff6fbdf3000 r--p 0000a000 08:06 3040056                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff6fbdf3000-7ff6fbdf4000 rw-p 0000b000 08:06 3040056                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ff6fbdf4000-7ff6fbdff000 r-xp 00000000 08:06 3040076                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff6fbdff000-7ff6fbffe000 ---p 0000b000 08:06 3040076                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff6fbffe000-7ff6fbfff000 r--p 0000a000 08:06 3040076                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff6fbfff000-7ff6fc000000 rw-p 0000b000 08:06 3040076                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ff6fc000000-7ff6fc176000 rw-p 00000000 00:00 0 
+7ff6fc176000-7ff700000000 ---p 00000000 00:00 0 
+7ff700000000-7ff700004000 r--s 00095000 08:06 941334                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jsse.jar
+7ff700004000-7ff700017000 r--s 00344000 08:06 941342                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/resources.jar
+7ff700017000-7ff7000a2000 rw-p 00000000 00:00 0 
+7ff7000a2000-7ff7001ce000 ---p 00000000 00:00 0 
+7ff7001ce000-7ff7001e5000 r-xp 00000000 08:06 3040065                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff7001e5000-7ff7003e4000 ---p 00017000 08:06 3040065                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff7003e4000-7ff7003e5000 r--p 00016000 08:06 3040065                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff7003e5000-7ff7003e6000 rw-p 00017000 08:06 3040065                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ff7003e6000-7ff7003e8000 rw-p 00000000 00:00 0 
+7ff7003e8000-7ff7003f1000 r-xp 00000000 08:06 3040064                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff7003f1000-7ff7005f0000 ---p 00009000 08:06 3040064                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff7005f0000-7ff7005f1000 r--p 00008000 08:06 3040064                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff7005f1000-7ff7005f2000 rw-p 00009000 08:06 3040064                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ff7005f2000-7ff700e05000 r--p 00000000 08:06 401320                     /usr/lib/locale/locale-archive
+7ff700e05000-7ff700e07000 r-xp 00000000 08:06 941483                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libnpt.so
+7ff700e07000-7ff701007000 ---p 00002000 08:06 941483                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libnpt.so
+7ff701007000-7ff701008000 rw-p 00002000 08:06 941483                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libnpt.so
+7ff701008000-7ff701041000 r-xp 00000000 08:06 941490                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjdwp.so
+7ff701041000-7ff701240000 ---p 00039000 08:06 941490                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjdwp.so
+7ff701240000-7ff701242000 rw-p 00038000 08:06 941490                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjdwp.so
+7ff701242000-7ff70126c000 r-xp 00000000 08:06 941479                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjava.so
+7ff70126c000-7ff70146c000 ---p 0002a000 08:06 941479                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjava.so
+7ff70146c000-7ff70146e000 rw-p 0002a000 08:06 941479                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libjava.so
+7ff70146e000-7ff70147b000 r-xp 00000000 08:06 941495                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libverify.so
+7ff70147b000-7ff70167b000 ---p 0000d000 08:06 941495                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libverify.so
+7ff70167b000-7ff70167d000 rw-p 0000d000 08:06 941495                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/libverify.so
+7ff70167d000-7ff701684000 r-xp 00000000 08:06 3040073                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff701684000-7ff701883000 ---p 00007000 08:06 3040073                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff701883000-7ff701884000 r--p 00006000 08:06 3040073                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff701884000-7ff701885000 rw-p 00007000 08:06 3040073                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ff701885000-7ff70198a000 r-xp 00000000 08:06 3040055                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff70198a000-7ff701b89000 ---p 00105000 08:06 3040055                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff701b89000-7ff701b8a000 r--p 00104000 08:06 3040055                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff701b8a000-7ff701b8b000 rw-p 00105000 08:06 3040055                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ff701b8b000-7ff702839000 r-xp 00000000 08:06 941517                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/server/libjvm.so
+7ff702839000-7ff702a39000 ---p 00cae000 08:06 941517                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/server/libjvm.so
+7ff702a39000-7ff702b10000 rw-p 00cae000 08:06 941517                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/amd64/server/libjvm.so
+7ff702b10000-7ff702b54000 rw-p 00000000 00:00 0 
+7ff702b54000-7ff702d0f000 r-xp 00000000 08:06 3040070                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff702d0f000-7ff702f0e000 ---p 001bb000 08:06 3040070                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff702f0e000-7ff702f12000 r--p 001ba000 08:06 3040070                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff702f12000-7ff702f14000 rw-p 001be000 08:06 3040070                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ff702f14000-7ff702f19000 rw-p 00000000 00:00 0 
+7ff702f19000-7ff702f1c000 r-xp 00000000 08:06 3040059                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff702f1c000-7ff70311b000 ---p 00003000 08:06 3040059                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff70311b000-7ff70311c000 r--p 00002000 08:06 3040059                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff70311c000-7ff70311d000 rw-p 00003000 08:06 3040059                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ff70311d000-7ff703132000 r-xp 00000000 08:06 940540                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/lib/amd64/jli/libjli.so
+7ff703132000-7ff703332000 ---p 00015000 08:06 940540                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/lib/amd64/jli/libjli.so
+7ff703332000-7ff703333000 rw-p 00015000 08:06 940540                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/lib/amd64/jli/libjli.so
+7ff703333000-7ff70334c000 r-xp 00000000 08:06 3040071                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff70334c000-7ff70354b000 ---p 00019000 08:06 3040071                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff70354b000-7ff70354c000 r--p 00018000 08:06 3040071                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff70354c000-7ff70354d000 rw-p 00019000 08:06 3040071                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ff70354d000-7ff703551000 rw-p 00000000 00:00 0 
+7ff703551000-7ff703574000 r-xp 00000000 08:06 3040067                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff703574000-7ff703575000 rw-p 00000000 00:00 0 
+7ff703575000-7ff703576000 r--s 00000000 08:06 941328                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/management-agent.jar
+7ff703576000-7ff70357b000 r--s 002f8000 08:06 941323                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/charsets.jar
+7ff70357b000-7ff70364d000 rw-p 00000000 00:00 0 
+7ff70364d000-7ff703650000 ---p 00000000 00:00 0 
+7ff703650000-7ff703752000 rw-p 00000000 00:00 0                          [stack:5037]
+7ff703752000-7ff703754000 r--s 00007000 08:06 941345                     /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jfxswt.jar
+7ff703754000-7ff703767000 rw-p 00000000 00:00 0 
+7ff703767000-7ff70376f000 rw-s 00000000 08:06 1581133                    /tmp/hsperfdata_tomek/5036
+7ff70376f000-7ff703770000 rw-p 00000000 00:00 0 
+7ff703770000-7ff703771000 r--p 00000000 00:00 0 
+7ff703771000-7ff703773000 rw-p 00000000 00:00 0 
+7ff703773000-7ff703774000 r--p 00022000 08:06 3040067                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff703774000-7ff703775000 rw-p 00023000 08:06 3040067                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ff703775000-7ff703776000 rw-p 00000000 00:00 0 
+7ffdcbe62000-7ffdcbe84000 rw-p 00000000 00:00 0                          [stack]
+7ffdcbfcd000-7ffdcbfcf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:58431,suspend=y,server=n -Dfile.encoding=UTF-8 
+java_command: command.Main
+java_class_path (initial): /home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jfxswt.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/resources.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/charsets.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/rt.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jfr.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/javaws.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jsse.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/management-agent.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/plugin.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/deploy.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/jce.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/dnsns.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/zipfs.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/sunjce_provider.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/localedata.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/sunec.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/sunpkcs11.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/cldrdata.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/jfxrt.jar:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/jre/lib/ext/nashorn.jar:/home/tomek/Desktop/wzorce/WzorceProjektowe/out/production/WzorceProjektowe:/home/tomek/Desktop/idea_15/idea15/lib/idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/tomek/Desktop/java_jdk/jdk1.8.0_51
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/bin:/home/tomek/Desktop/maven/apache-maven-3.2.2/bin:/home/tomek/Desktop/java_jdk/jdk1.8.0_51/bin:/home/tomek/Desktop/maven/apache-maven-3.2.2/bin
+LD_LIBRARY_PATH=.:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaad540], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaad540], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x90b6b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x90ccf0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x90e040], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+
+uname:Linux 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:34:22 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 30611, NOFILE 4096, AS infinity
+load average:0,90 0,56 0,54
+
+/proc/meminfo:
+MemTotal:        3939940 kB
+MemFree:          656948 kB
+Buffers:          118980 kB
+Cached:          1183952 kB
+SwapCached:            0 kB
+Active:          2168944 kB
+Inactive:         938552 kB
+Active(anon):    1806320 kB
+Inactive(anon):   259952 kB
+Active(file):     362624 kB
+Inactive(file):   678600 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       4083708 kB
+SwapFree:        4083708 kB
+Dirty:              9272 kB
+Writeback:             0 kB
+AnonPages:       1804480 kB
+Mapped:           245796 kB
+Shmem:            261712 kB
+Slab:              92236 kB
+SReclaimable:      63252 kB
+SUnreclaim:        28984 kB
+KernelStack:        4896 kB
+PageTables:        31268 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6053676 kB
+Committed_AS:    5806872 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      348628 kB
+VmallocChunk:   34359381556 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    970752 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       53668 kB
+DirectMap2M:     4032512 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz
+stepping	: 6
+microcode	: 0x60f
+cpu MHz		: 2401.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4787.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz
+stepping	: 6
+microcode	: 0x60f
+cpu MHz		: 2401.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4787.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3939940k(656948k free), swap 4083708k(4083708k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.51-b03) for linux-amd64 JRE (1.8.0_51-b16), built on Jun  8 2015 19:28:07 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Tue Aug 16 14:48:24 2016
+elapsed time: 529 seconds (0d 0h 8m 49s)
+
