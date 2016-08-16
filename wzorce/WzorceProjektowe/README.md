@@ -58,6 +58,30 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - Macro Commands are a simple extension of Command that allow multiple commands to be invoked
 
+## Adapter pattern
+
+  -  converts the interface of class into another interface clients expect.
+
+  - lets classes worj together that couldn't otherwise because of icompatible interaces
+
+  - When you need to use anexisting class and its interface is not the one you need, use an adapter.
+
+  - An adapter changes an interface into one a client expects.
+
+
+## Facade Pattern
+
+  - provides a unified interface to a set of interfaces in a subsytem.
+
+  - Facade defines a higher-level interface that makes the subsystem easier to use.
+
+  - when you need to simplify and unify a large interface or complex set of interfaces
+
+  - facade decouples a client from a complex subsystem.
+
+  - implementing facade requires that we compose the facade with its subsystem and use delegation to perform the work of the facade.
+
+  
 # Design principles
 
   - Encapsulate what varies
@@ -69,3 +93,5 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
   - Classes should be open for extension, but closed for modification.
 
   - Depend upon abstractions. Do not depend upon concrete classes
+
+  - Principle of Least Knowledge - talk only to your immediate friends.
