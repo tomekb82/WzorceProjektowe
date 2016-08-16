@@ -1,4 +1,6 @@
-package command;
+package command.commands;
+
+import command.receivers.Stereo;
 
 /**
  * Created by tomek on 16.08.16.

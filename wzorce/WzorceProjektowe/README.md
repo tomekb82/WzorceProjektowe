@@ -50,7 +50,21 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
 
+  - decouples an object, making a request from the one that knows how to perform it.
+
+  - Command object is at the center of this decoupling and encapsulates a receiver with an action (or set of actions) .
+
+  - invoker makes a request of a Command object by calling its execute() method, which invokes those actions on the receiver.
+
+  - Macro Commands are a simple extension of Command that allow multiple commands to be invoked
+
 # Design principles
+
+  - Encapsulate what varies
+
+  - Favor composition over inheritance
+
+  - Program to interface not implementation
 
   - Classes should be open for extension, but closed for modification.
 

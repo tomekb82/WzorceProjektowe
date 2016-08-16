@@ -1,4 +1,6 @@
-package command;
+package command.commands;
+
+import command.receivers.Light;
 
 /**
  * Created by tomek on 15.08.16.

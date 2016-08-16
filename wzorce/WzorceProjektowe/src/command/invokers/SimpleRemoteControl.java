@@ -1,4 +1,6 @@
-package command;
+package command.invokers;
+
+import command.commands.Command;
 
 /**
  * Created by tomek on 15.08.16.

@@ -1,10 +1,9 @@
-package command;
+package command.invokers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import command.commands.Command;
+import command.commands.NoCommand;
+
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * Created by tomek on 16.08.16.

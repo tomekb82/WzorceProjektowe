@@ -1,4 +1,4 @@
-package command;
+package command.receivers;
 
 /**
  * Created by tomek on 16.08.16.
