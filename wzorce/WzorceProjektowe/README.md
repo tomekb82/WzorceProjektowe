@@ -81,7 +81,20 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - implementing facade requires that we compose the facade with its subsystem and use delegation to perform the work of the facade.
 
-  
+## Template Method Pattern
+
+   - defines the skeleton of an algorithm in a method, deferring some steps to subclasses.
+
+   - Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+   - The template method’s abstract class may define: concrete methods, abstract methods and hooks.
+
+   - Abstract methods are  implemented by subclasses.
+
+   - Hooks - are methods that do nothing or default behavior in the abstract class, but may be overridden in the subclass.
+
+   - To prevent subclasses from changing the algorithm in the template method, declare the template method as final.
+
 # Design principles
 
   - Encapsulate what varies
