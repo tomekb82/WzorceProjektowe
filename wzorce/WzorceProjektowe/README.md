@@ -98,6 +98,21 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 ## Iterator Pattern
 
    - provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation(implementation).
+
+   - Iterator takes the job of iterating over an aggregate and encapsulates it in another object.
+
+   - When using an Iterator, we relieve the aggregate of the responsibility of supporting operations for traversing its data
+
+   - Iterator provides a common interface for traversing the items of an aggregate, allowing you to use polymorphism when writing code that makes use of the items of the aggregate
+
+   -
+
+## Composite Pattern
+
+  - allows you to compose objects into tree structures to represent part-whole hierarchies.
+
+  - composite lets clients treat individual objects and compositions of objects uniformly.
+
 # Design principles
 
   - Encapsulate what varies
