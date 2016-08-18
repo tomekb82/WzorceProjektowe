@@ -113,6 +113,18 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - composite lets clients treat individual objects and compositions of objects uniformly.
 
+## State Pattern
+
+   - allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+  - The Context gets its behavior by delegating to the current state object it is composed with.
+
+  - By encapsulating each state into a class, we localize any changes that will need to be made.
+
+  - State transitions can be controlled by the State classes or by the Context classes.
+
+  - State classes may be shared among Context instances.
+
 # Design principles
 
   - Encapsulate what varies
