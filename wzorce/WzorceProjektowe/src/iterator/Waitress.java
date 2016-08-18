@@ -4,12 +4,14 @@ package iterator;
  * Created by tomek on 18.08.16.
  */
 public class Waitress {
-    DinerMenu dinerMenu;
-    BreakfastMenu breakfastMenu;
+    Menu dinerMenu;
+    Menu breakfastMenu;
+    Menu cafeMenu;
 
-    public Waitress(DinerMenu dinerMenu, BreakfastMenu breakfastMenu) {
+    public Waitress(Menu dinerMenu, Menu breakfastMenu, Menu cafeMenu) {
         this.dinerMenu = dinerMenu;
         this.breakfastMenu = breakfastMenu;
+        this.cafeMenu = cafeMenu;
     }
 
     public void printMenu(){
@@ -31,12 +33,15 @@ public class Waitress {
     }
 
     public void printMenuJavaUtilIterator(){
-        java.util.Iterator dinerIterator = dinerMenu.createIteratorjavaUtil();
+        java.util.Iterator dinerIterator = dinerMenu.createIteratorJavaUtil();
         java.util.Iterator breakfastIterator = breakfastMenu.createIteratorJavaUtil();
+        java.util.Iterator cafeIterator = cafeMenu.createIteratorJavaUtil();
         System.out.println("\n Breakfast");
         printMenuJavaUtil(breakfastIterator);
         System.out.println("\n DINER");
         printMenuJavaUtil(dinerIterator);
+        System.out.println("\n CAFE");
+        printMenuJavaUtil(cafeIterator);
     }
 
     private void printMenuJavaUtil(java.util.Iterator iterator){

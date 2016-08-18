@@ -3,7 +3,7 @@ package iterator;
 /**
  * Created by tomek on 18.08.16.
  */
-public class DinerMenu {
+public class DinerMenu implements Menu{
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -32,7 +32,7 @@ public class DinerMenu {
     public Iterator createIterator(){
         return new DinerMenuIterator(menuItems);
     }
-    public java.util.Iterator createIteratorjavaUtil(){
+    public java.util.Iterator createIteratorJavaUtil(){
         return new DinerMenuJavaUtilIterator(menuItems);
     }
 }

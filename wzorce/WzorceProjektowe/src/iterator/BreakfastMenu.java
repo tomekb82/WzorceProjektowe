@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by tomek on 18.08.16.
  */
-public class BreakfastMenu {
+public class BreakfastMenu implements Menu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;

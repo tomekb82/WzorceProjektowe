@@ -95,6 +95,9 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
    - To prevent subclasses from changing the algorithm in the template method, declare the template method as final.
 
+## Iterator Pattern
+
+   - provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation(implementation).
 # Design principles
 
   - Encapsulate what varies
@@ -108,3 +111,5 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
   - Depend upon abstractions. Do not depend upon concrete classes
 
   - Principle of Least Knowledge - talk only to your immediate friends.
+
+  - Sigle Reponsibility - a class should have only one reason to change.

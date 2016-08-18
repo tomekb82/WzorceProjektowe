@@ -9,7 +9,8 @@ public class Main {
 
         DinerMenu dinerMenu = new DinerMenu();
         BreakfastMenu breakfastMenu = new BreakfastMenu();
-        Waitress waitress = new Waitress(dinerMenu, breakfastMenu);
+        CafeMenu cafeMenu = new CafeMenu();
+        Waitress waitress = new Waitress(dinerMenu, breakfastMenu, cafeMenu);
 
         //waitress.printMenu();
         waitress.printMenuJavaUtilIterator();
