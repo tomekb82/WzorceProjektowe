@@ -125,6 +125,44 @@ class to instantiate. Factory Method lets a class defer instantiation to subclas
 
   - State classes may be shared among Context instances.
 
+
+## Proxy pattern
+
+ - provides a surrogate or placeholder for another object to control access to it.
+
+ - Use the Proxy Pattern to create a representative object that controls access to another object, which may be remote, expensive to create or in need of securing.
+
+ - Remote Proxy manages interaction between a client and a remote object.
+
+ - Virtual Proxy controls access to an object that is expensive to instantiate.
+
+ - Protection Proxy controls access to the methods of an object based on the caller.
+
+ - Java’s built-in support for Proxy can build a dynamic proxy class on demand and dispatch all calls on it to a handler of your choosing.
+
+ - generate stubs and skeletons  - warning !!! USE the same java jdk version (for javac/java/rmi/rmiregisty)
+
+    $ javac MyRemote.java
+
+    $ javac MyRemoteImpl.java
+
+    $ rmic proxy.MyRemoteImpl
+
+- run rmiregistry
+
+    $ rmiregistry
+
+- start the service
+
+    $ java proxy.MyRemoteImpl
+
+- start the client
+
+    $ javac MyRemoteClient.java
+
+    $ java proxy.MyRemoteClient
+
+
 # Design principles
 
   - Encapsulate what varies
